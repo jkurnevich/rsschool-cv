@@ -4,7 +4,36 @@ html {
   background-color: #edf0f2;
 }
 
-html h1 {
+html h2,
+html h4 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+html main {
+  background-color: #fefefa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.global-wrap {
+  max-width: 800px;
+  -webkit-box-shadow: 0 2px 8px rgba(14, 19, 24, 0.07);
+          box-shadow: 0 2px 8px rgba(14, 19, 24, 0.07);
+  margin: 20px auto;
+}
+
+.sidebar {
+  background-color: #494e5f;
+  width: 34%;
+  height: auto;
+  margin: 10px 0 0;
+  padding: 80px 50px;
+  color: #fefefa;
+}
+
+.sidebar h2 {
   color: #ffe7d4;
   font-size: 2.9rem;
   text-transform: uppercase;
@@ -12,28 +41,9 @@ html h1 {
   margin-bottom: 0;
 }
 
-html h2 {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-
-html main {
-  max-width: 800px;
-  background-color: #fefefa;
-  -webkit-box-shadow: 0 2px 8px rgba(14, 19, 24, 0.07);
-          box-shadow: 0 2px 8px rgba(14, 19, 24, 0.07);
-  margin: 20px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-html .sidebar {
-  background-color: #494e5f;
-  width: 34%;
-  height: auto;
-  margin: 10px 0;
-  padding: 80px 50px;
+.sidebar h4 {
+  color: #ffe7d4;
+  margin-top: 40px;
 }
 
 .candidate {
@@ -55,5 +65,154 @@ html .sidebar {
 
 .candidate__profession {
   color: #fefefa;
+}
+
+.contact-information ul {
+  padding: 0;
+}
+
+.contact-information ul li {
+  list-style-type: none;
+  line-height: 26px;
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: 0px 50%;
+  margin-left: 10px;
+}
+
+.contact-information ul li a {
+  color: #fefefa;
+  text-decoration: none;
+}
+
+.contact-information__location {
+  background-image: url(/assets/images/icons/location.png);
+}
+
+.contact-information__phone {
+  background-image: url(/assets/images/icons/phone.png);
+}
+
+.contact-information__message {
+  background-image: url(/assets/images/icons/message.png);
+}
+
+.contact-information__github {
+  background-image: url(/assets/images/icons/github.png);
+}
+
+.contact-information__linkedin {
+  background-image: url(/assets/images/icons/link.png);
+}
+
+.contact-information__skype {
+  background-image: url(/assets/images/icons/skype.png);
+}
+
+.contact-information__instagram {
+  background-image: url(/assets/images/icons/inst.png);
+}
+
+.languages ul {
+  padding: 0;
+}
+
+.languages ul li {
+  list-style-type: none;
+}
+
+.content-area {
+  padding: 30px 35px;
+  color: #494e5f;
+  width: 66%;
+}
+
+.content-area h2 {
+  background-color: #ffe7d4;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+.content-area section {
+  margin-top: 50px;
+}
+
+.content-area .content-area_bold {
+  font-weight: 600;
+}
+
+.content-area .content-area_gray {
+  margin-top: -10px;
+  color: #b5b5b5;
+  font-size: 0.9rem;
+}
+
+.technikal-skills__lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.technikal-skills__lists div {
+  width: 50%;
+}
+
+.technikal-skills__lists h3 {
+  font-weight: 600;
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.technikal-skills__code {
+  padding: 0;
+}
+
+.technikal-skills__code li {
+  list-style-type: none;
+}
+
+.technikal-skills__code li span {
+  color: #b5b5b5;
+  font-size: 0.8rem;
+  margin-right: 5px;
+  width: 33px;
+  display: inline-block;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #494e5f;
+  padding: 5px 35px 5px 60px;
+}
+
+footer .git-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .git-link img {
+  margin-right: 7px;
+}
+
+footer .git-link a {
+  color: #dcdcdc;
+  text-decoration: none;
+  font-weight: 100;
+}
+
+footer .school-link img {
+  min-width: 100px;
 }
 /*# sourceMappingURL=style.css.map */

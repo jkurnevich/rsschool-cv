@@ -3,7 +3,33 @@ html {
     font-size: 14px;
     background-color: #edf0f2;
 
-    h1 {
+    h2,
+    h4 {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+    main {
+        background-color: rgb(254, 254, 250);
+        display: flex;
+    }
+}
+
+.global-wrap {
+    max-width: 800px;
+    box-shadow: 0 2px 8px rgba(14, 19, 24, .07);
+    margin: 20px auto;
+}
+
+.sidebar {
+    background-color: rgb(73, 78, 95);
+    width: 34%;
+    height: auto;
+    margin: 10px 0 0;
+    padding: 80px 50px;
+    color: #fefefa;
+
+    h2 {
         color: #ffe7d4;
         font-size: 2.9rem;
         text-transform: uppercase;
@@ -11,25 +37,9 @@ html {
         margin-bottom: 0;
     }
 
-    h2 {
-        font-size: 1.2rem;
-        text-transform: uppercase;
-    }
-
-    main {
-        max-width: 800px;
-        background-color: rgb(254, 254, 250);
-        box-shadow: 0 2px 8px rgba(14, 19, 24, .07);
-        margin: 20px auto;
-        display: flex;
-    }
-
-    .sidebar {
-        background-color: rgb(73, 78, 95);
-        width: 34%;
-        height: auto;
-        margin: 10px 0;
-        padding: 80px 50px;
+    h4 {
+        color: #ffe7d4;
+        margin-top: 40px;
     }
 }
 
@@ -51,5 +61,150 @@ html {
 
     &__profession {
         color: #fefefa;
+    }
+}
+
+.contact-information {
+    ul {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            line-height: 26px;
+            padding-left: 30px;
+            background-repeat: no-repeat;
+            background-position: 0px 50%;
+            margin-left: 10px;
+
+            a {
+                color: #fefefa;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__location {
+        background-image: url(/assets/images/icons/location.png);
+    }
+
+    &__phone {
+        background-image: url(/assets/images/icons/phone.png);
+    }
+
+    &__message {
+        background-image: url(/assets/images/icons/message.png);
+    }
+
+    &__github {
+        background-image: url(/assets/images/icons/github.png);
+    }
+
+    &__linkedin {
+        background-image: url(/assets/images/icons/link.png);
+    }
+
+    &__skype {
+        background-image: url(/assets/images/icons/skype.png);
+    }
+
+    &__instagram {
+        background-image: url(/assets/images/icons/inst.png);
+    }
+}
+
+.languages {
+    ul {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+        }
+    }
+}
+
+.content-area {
+    padding: 30px 35px;
+    color: #494e5f;
+    width: 66%;
+
+    h2 {
+        background-color: #ffe7d4;
+        padding: 10px 20px;
+        font-weight: 600;
+    }
+
+    section {
+        margin-top: 50px;
+    }
+
+    .content-area_bold {
+        font-weight: 600;
+    }
+
+    .content-area_gray {
+        margin-top: -10px;
+        color: #b5b5b5;
+        font-size: 0.9rem;
+    }
+}
+
+.technikal-skills {
+    &__lists {
+        display: flex;
+
+        div {
+            width: 50%;
+        }
+
+        h3 {
+            font-weight: 600;
+            margin-top: 0;
+            font-size: 1rem;
+        }
+    }
+
+    &__code {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+
+            span {
+                color: #b5b5b5;
+                font-size: 0.8rem;
+                margin-right: 5px;
+                width: 33px;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #494e5f;
+    padding: 5px 35px 5px 60px;
+
+    .git-link {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 7px;
+        }
+
+        a {
+            color: #dcdcdc;
+            text-decoration: none;
+            font-weight: 100;
+        }
+    }
+
+    .school-link {
+        img {
+            min-width: 100px;
+        }
     }
 }
