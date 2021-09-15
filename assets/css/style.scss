@@ -1,0 +1,55 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background-color: #edf0f2;
+
+    h1 {
+        color: #ffe7d4;
+        font-size: 2.9rem;
+        text-transform: uppercase;
+        line-height: 2.6rem;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+    main {
+        max-width: 800px;
+        background-color: rgb(254, 254, 250);
+        box-shadow: 0 2px 8px rgba(14, 19, 24, .07);
+        margin: 20px auto;
+        display: flex;
+    }
+
+    .sidebar {
+        background-color: rgb(73, 78, 95);
+        width: 34%;
+        height: auto;
+        margin: 10px 0;
+        padding: 80px 50px;
+    }
+}
+
+.candidate {
+    border-bottom: 3px solid #ffe7d4;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+
+    &__photo {
+        margin: 0;
+
+        img {
+            width: 80%;
+            border-radius: 150px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    &__profession {
+        color: #fefefa;
+    }
+}
