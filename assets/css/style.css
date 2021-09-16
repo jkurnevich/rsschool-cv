@@ -2,6 +2,7 @@ html {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   background-color: #edf0f2;
+  scroll-behavior: smooth;
 }
 
 html h2,
@@ -25,7 +26,7 @@ html main {
 }
 
 .content-area {
-  padding: 30px 53px;
+  padding: 30px 35px;
   color: #494e5f;
   width: 66%;
   overflow: auto;
@@ -63,17 +64,6 @@ html main {
           user-select: none;
 }
 
-.navigation__menuToggle a {
-  text-decoration: none;
-  color: #232323;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-}
-
-.navigation__menuToggle a:hover {
-  color: tomato;
-}
-
 .navigation__menuToggle input {
   display: block;
   width: 40px;
@@ -91,7 +81,7 @@ html main {
   opacity: 1;
   -webkit-transform: rotate(45deg) translate(-2px, -1px);
           transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #ffe7d4;
 }
 
 .navigation__menuToggle input:checked ~ span:nth-last-child(2) {
@@ -151,7 +141,7 @@ html main {
 
 .navigation__menu {
   position: absolute;
-  width: 300px;
+  width: 200px;
   margin: -79px 0 0 -50px;
   padding: 50px;
   padding-top: 80px;
@@ -168,9 +158,18 @@ html main {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-.navigation__menu li {
-  padding: 10px 0;
-  font-size: 22px;
+.navigation__menu a {
+  text-decoration: none;
+  color: #ffe7d4;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  padding: 6px 0;
+  font-size: 1.3rem;
+  display: block;
+}
+
+.navigation__menu a:hover {
+  color: tomato;
 }
 
 .sidebar {

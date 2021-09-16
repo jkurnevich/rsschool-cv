@@ -2,6 +2,7 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     background-color: #edf0f2;
+    scroll-behavior: smooth;
 
     h2,
     h4 {
@@ -22,7 +23,7 @@ html {
 }
 
 .content-area {
-    padding: 30px 53px;
+    padding: 30px 35px;
     color: #494e5f;
     width: 66%;
     overflow: auto;
@@ -57,16 +58,6 @@ html {
         z-index: 1;
         user-select: none;
     
-        a {
-            text-decoration: none;
-            color: #232323;
-            transition: color 0.3s ease;
-    
-            &:hover {
-                color: tomato;
-            }
-        }
-    
         input {
             display: block;
             width: 40px;
@@ -82,7 +73,7 @@ html {
             &:checked ~ span {
                 opacity: 1;
                 transform: rotate(45deg) translate(-2px, -1px);
-                background: #232323;
+                background: #ffe7d4;
     
                 &:nth-last-child(2) {
                     transform: rotate(-45deg) translate(0, -1px);
@@ -137,7 +128,7 @@ html {
 
     &__menu {
         position: absolute;
-        width: 300px;
+        width: 200px;
         margin: -79px 0 0 -50px;
         padding: 50px;
         padding-top: 80px;
@@ -148,9 +139,17 @@ html {
         transform: translate(-100%, 0);
         transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
-        li {
-            padding: 10px 0;
-            font-size: 22px;
+        a {
+            text-decoration: none;
+            color: #ffe7d4;
+            transition: color 0.3s ease;
+            padding: 6px 0;
+            font-size: 1.3rem;
+            display: block;
+    
+            &:hover {
+                color: tomato;
+            }
         }
     }
 }
