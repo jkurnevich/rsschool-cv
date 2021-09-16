@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Julia Kurnevich</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
         rel="stylesheet">
-    <title>Resume - Julia Kurnevich</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
   <div class="global-wrap">
@@ -97,6 +100,157 @@
             <li>English — A2 — Pre Intermediate</li>
             <li>Polish — A1/A2 — Elementary</li>
           </ul>
+        </section>
+        <section class="code-examples">
+          <h2>Code examples</h2>
+          <details>
+            <summary>Copy Promo code</summary>
+            <div>
+              <pre>
+                  <code class="js">
+function copyPromocode() {
+  let promocode = document.querySelectorAll('.promo-code__copy');
+  let btn = document.querySelectorAll('.promo-code__btn');
+                  
+  if (btn !== null) {
+    btn.forEach(function (btn, index) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+                  
+        promocode[index].select();
+        promocode[index].setSelectionRange(0, 99999); /* For mobile devices */
+        document.execCommand("copy");
+                  
+        btn.innerHTML = 'Done!';
+        setTimeout(() => { btn.innerHTML = 'Copy'}, 3000);
+      })
+    })
+  }
+}
+                </code>
+              </pre>
+            </div>
+          </details>
+          <details>
+            <summary>Custom Slider</summary>
+            <div>
+              <pre>
+                <code class="js">
+function sliderCards() {
+  let widthItem = document.querySelector("div.slider__item");
+  let btnNext = document.querySelectorAll(".slider-arrow.next");
+  let btnPrev = document.querySelectorAll(".slider-arrow.prev");
+  let slider = document.querySelectorAll("div.slider__wrap");
+  let wrapSlider = document.querySelectorAll("div.slider");
+  let slCount = document.querySelectorAll("div.slider .count");
+  let viewSlide = 0;
+  let countChildren = [];
+  let viewSlideActive = [];
+
+  function displayArrow(btn, index) {
+    if(slider[index].offsetWidth < wrapSlider[index].offsetWidth) {
+      btn.style.display = 'none';
+    }
+  }
+                
+                
+  slider.forEach(function (sl, index) {
+    let clientX, deltaX;
+                
+    countChildren[index] = sl.childElementCount;
+    wrapSlider[index].style.height = sl.offsetHeight + 40 + 'px';
+    sl.addEventListener('touchstart', function (e) {
+      clientX = e.touches[0].clientX;
+    }, {passive: true})
+    sl.addEventListener('touchend', function (e) {
+      deltaX = e.changedTouches[0].clientX - clientX;
+      if (viewSlide < countChildren[index] - viewSlideActive[index] && deltaX < 0) { // Если верно то
+        viewSlide++;
+      } else if (viewSlide > 0 && deltaX > 0) {
+        viewSlide--;
+      }
+      sl.style.left = -viewSlide * (widthItem.offsetWidth + 30) + "px";
+      slCount[index].innerHTML = (viewSlide + 1) + ' / ' + countChildren[index];
+    }, {passive: true})
+                
+    slCount[index].innerHTML = '1 / ' + countChildren[index];
+  })
+
+  wrapSlider.forEach(function (wrSl, index) {
+    viewSlideActive[index] = Math.round(wrSl.offsetWidth / widthItem.offsetWidth - 0.5);
+  })
+                
+  btnNext.forEach(function (btn, index) {
+    displayArrow(btn, index);
+    btn.addEventListener("click", function () {
+      if (viewSlide < countChildren[index] - viewSlideActive[index]) { // Если верно то
+        viewSlide++;
+      } else {
+        viewSlide = 0;
+      }
+      slider[index].style.left = -viewSlide * (widthItem.offsetWidth + 30) + "px";
+      slCount[index].innerHTML = (viewSlide + 1) + ' / ' + countChildren[index];
+    });
+  })
+                
+  btnPrev.forEach(function (btn, index) {
+    displayArrow(btn, index);
+    btn.addEventListener("click", function () {
+      if (viewSlide > 0) {
+        viewSlide--;
+      } else {
+        viewSlide = countChildren[index] - viewSlideActive[index];
+      }
+      slider[index].style.left = -viewSlide * (widthItem.offsetWidth + 30) + "px";
+      slCount[index].innerHTML = (viewSlide + 1) + ' / ' + countChildren[index];
+    });
+  })
+}
+                </code>
+              </pre>
+            </div>
+          </details>
+          <details>
+            <summary>
+              Go To-Top
+            </summary>
+            <div>
+              <pre>
+                <code class="js">
+function goToTop() {
+
+  const scrollToTopButton = document.querySelector('.go-to-top');
+                  
+  const scrollFunc = () => {
+    let y = window.scrollY;
+                  
+    if (y > 700) {
+      scrollToTopButton.className = "go-to-top show";
+    } else {
+      scrollToTopButton.className = "go-to-top hide";
+    }
+  };
+                
+  window.addEventListener("scroll", scrollFunc);
+                
+  const scrollToTop = () => {
+    const c = document.documentElement.scrollTop || document.body.scrollTop;
+                
+    if (c > 0) {
+      window.requestAnimationFrame(scrollToTop);
+      window.scrollTo(0, c - c / 10);
+    }
+  };
+                
+  scrollToTopButton.onclick = function(e) {
+    e.preventDefault();
+      scrollToTop();
+  }
+}
+                </code>
+              </pre>
+            </div>
+          </details>
         </section>
       </div>
     </main>

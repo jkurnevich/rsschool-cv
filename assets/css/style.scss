@@ -16,19 +16,46 @@ html {
 }
 
 .global-wrap {
-    max-width: 800px;
+    max-width: 1000px;
     box-shadow: 0 2px 8px rgba(14, 19, 24, .07);
     margin: 20px auto;
 }
 
+.content-area {
+    padding: 30px 53px;
+    color: #494e5f;
+    width: 66%;
+    overflow: auto;
+
+    h2 {
+        background-color: #ffe7d4;
+        padding: 10px 20px;
+        font-weight: 600;
+    }
+
+    section {
+        margin-top: 50px;
+    }
+
+    .content-area_bold {
+        font-weight: 600;
+    }
+
+    .content-area_gray {
+        margin-top: -10px;
+        color: #b5b5b5;
+        font-size: 0.9rem;
+    }
+}
+
 .sidebar {
     background-color: rgb(73, 78, 95);
-    width: 34%;
+    max-width: 250px;
     height: auto;
     margin: 10px 0 0;
     padding: 80px 50px;
     color: #fefefa;
-
+  
     h2 {
         color: #ffe7d4;
         font-size: 2.9rem;
@@ -36,12 +63,12 @@ html {
         line-height: 2.6rem;
         margin-bottom: 0;
     }
-
+  
     h4 {
         color: #ffe7d4;
         margin-top: 40px;
     }
-}
+  }
 
 .candidate {
     border-bottom: 3px solid #ffe7d4;
@@ -64,54 +91,6 @@ html {
     }
 }
 
-.contact-information {
-    ul {
-        padding: 0;
-
-        li {
-            list-style-type: none;
-            line-height: 26px;
-            padding-left: 30px;
-            background-repeat: no-repeat;
-            background-position: 0px 50%;
-            margin-left: 10px;
-
-            a {
-                color: #fefefa;
-                text-decoration: none;
-            }
-        }
-    }
-
-    &__location {
-        background-image: url(assets/images/icons/location.png);
-    }
-
-    &__phone {
-        background-image: url(assets/images/icons/phone.png);
-    }
-
-    &__message {
-        background-image: url(assets/images/icons/message.png);
-    }
-
-    &__github {
-        background-image: url(assets/images/icons/github.png);
-    }
-
-    &__linkedin {
-        background-image: url(assets/images/icons/link.png);
-    }
-
-    &__skype {
-        background-image: url(assets/images/icons/skype.png);
-    }
-
-    &__instagram {
-        background-image: url(assets/images/icons/inst.png);
-    }
-}
-
 .languages {
     ul {
         padding: 0;
@@ -119,32 +98,6 @@ html {
         li {
             list-style-type: none;
         }
-    }
-}
-
-.content-area {
-    padding: 30px 35px;
-    color: #494e5f;
-    width: 66%;
-
-    h2 {
-        background-color: #ffe7d4;
-        padding: 10px 20px;
-        font-weight: 600;
-    }
-
-    section {
-        margin-top: 50px;
-    }
-
-    .content-area_bold {
-        font-weight: 600;
-    }
-
-    .content-area_gray {
-        margin-top: -10px;
-        color: #b5b5b5;
-        font-size: 0.9rem;
     }
 }
 
@@ -180,7 +133,67 @@ html {
     }
 }
 
-footer {
+.contact-information {
+    ul {
+        padding: 0;
+  
+        li {
+            list-style-type: none;
+            line-height: 26px;
+            padding-left: 30px;
+            background-repeat: no-repeat;
+            background-position: 0px 50%;
+            margin-left: 10px;
+  
+            a {
+                color: #fefefa;
+                text-decoration: none;
+            }
+        }
+    }
+  
+    &__location {
+      background-image: url(../images/icons/location.png);
+    }
+  
+    &__phone {
+        background-image: url(../images/icons/phone.png);
+    }
+  
+    &__message {
+        background-image: url(../images/icons/message.png);
+    }
+  
+    &__github {
+        background-image: url(../images/icons/github.png);
+    }
+  
+    &__linkedin {
+        background-image: url(../images/icons/link.png);
+    }
+  
+    &__skype {
+        background-image: url(../images/icons/skype.png);
+    }
+  
+    &__instagram {
+        background-image: url(../images/icons/inst.png);
+    }
+  }
+
+.code-examples {
+    details {
+        margin: 5px 0 5px 10px;
+
+        summary {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+  footer {
     display: flex;
     justify-content: space-between;
     align-items: center;

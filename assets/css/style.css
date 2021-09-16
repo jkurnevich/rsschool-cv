@@ -18,15 +18,42 @@ html main {
 }
 
 .global-wrap {
-  max-width: 800px;
+  max-width: 1000px;
   -webkit-box-shadow: 0 2px 8px rgba(14, 19, 24, 0.07);
           box-shadow: 0 2px 8px rgba(14, 19, 24, 0.07);
   margin: 20px auto;
 }
 
+.content-area {
+  padding: 30px 53px;
+  color: #494e5f;
+  width: 66%;
+  overflow: auto;
+}
+
+.content-area h2 {
+  background-color: #ffe7d4;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+.content-area section {
+  margin-top: 50px;
+}
+
+.content-area .content-area_bold {
+  font-weight: 600;
+}
+
+.content-area .content-area_gray {
+  margin-top: -10px;
+  color: #b5b5b5;
+  font-size: 0.9rem;
+}
+
 .sidebar {
   background-color: #494e5f;
-  width: 34%;
+  max-width: 250px;
   height: auto;
   margin: 10px 0 0;
   padding: 80px 50px;
@@ -67,84 +94,12 @@ html main {
   color: #fefefa;
 }
 
-.contact-information ul {
-  padding: 0;
-}
-
-.contact-information ul li {
-  list-style-type: none;
-  line-height: 26px;
-  padding-left: 30px;
-  background-repeat: no-repeat;
-  background-position: 0px 50%;
-  margin-left: 10px;
-}
-
-.contact-information ul li a {
-  color: #fefefa;
-  text-decoration: none;
-}
-
-.contact-information__location {
-  background-image: url(/assets/images/icons/location.png);
-}
-
-.contact-information__phone {
-  background-image: url(/assets/images/icons/phone.png);
-}
-
-.contact-information__message {
-  background-image: url(/assets/images/icons/message.png);
-}
-
-.contact-information__github {
-  background-image: url(/assets/images/icons/github.png);
-}
-
-.contact-information__linkedin {
-  background-image: url(/assets/images/icons/link.png);
-}
-
-.contact-information__skype {
-  background-image: url(/assets/images/icons/skype.png);
-}
-
-.contact-information__instagram {
-  background-image: url(/assets/images/icons/inst.png);
-}
-
 .languages ul {
   padding: 0;
 }
 
 .languages ul li {
   list-style-type: none;
-}
-
-.content-area {
-  padding: 30px 35px;
-  color: #494e5f;
-  width: 66%;
-}
-
-.content-area h2 {
-  background-color: #ffe7d4;
-  padding: 10px 20px;
-  font-weight: 600;
-}
-
-.content-area section {
-  margin-top: 50px;
-}
-
-.content-area .content-area_bold {
-  font-weight: 600;
-}
-
-.content-area .content-area_gray {
-  margin-top: -10px;
-  color: #b5b5b5;
-  font-size: 0.9rem;
 }
 
 .technikal-skills__lists {
@@ -177,6 +132,60 @@ html main {
   margin-right: 5px;
   width: 33px;
   display: inline-block;
+}
+
+.contact-information ul {
+  padding: 0;
+}
+
+.contact-information ul li {
+  list-style-type: none;
+  line-height: 26px;
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: 0px 50%;
+  margin-left: 10px;
+}
+
+.contact-information ul li a {
+  color: #fefefa;
+  text-decoration: none;
+}
+
+.contact-information__location {
+  background-image: url(../images/icons/location.png);
+}
+
+.contact-information__phone {
+  background-image: url(../images/icons/phone.png);
+}
+
+.contact-information__message {
+  background-image: url(../images/icons/message.png);
+}
+
+.contact-information__github {
+  background-image: url(../images/icons/github.png);
+}
+
+.contact-information__linkedin {
+  background-image: url(../images/icons/link.png);
+}
+
+.contact-information__skype {
+  background-image: url(../images/icons/skype.png);
+}
+
+.contact-information__instagram {
+  background-image: url(../images/icons/inst.png);
+}
+
+.code-examples details {
+  margin: 5px 0 5px 10px;
+}
+
+.code-examples details summary:hover {
+  cursor: pointer;
 }
 
 footer {
