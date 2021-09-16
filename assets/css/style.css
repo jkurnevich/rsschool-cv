@@ -51,6 +51,128 @@ html main {
   font-size: 0.9rem;
 }
 
+.navigation__menuToggle {
+  display: block;
+  position: relative;
+  top: 10px;
+  left: -3px;
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.navigation__menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.navigation__menuToggle a:hover {
+  color: tomato;
+}
+
+.navigation__menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: 13px;
+  left: -7px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+.navigation__menuToggle input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+          transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+.navigation__menuToggle input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+          transform: rotate(-45deg) translate(0, -1px);
+}
+
+.navigation__menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.navigation__menuToggle input:checked ~ ul {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.navigation__menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.navigation__menuToggle span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+.navigation__menuToggle span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+.navigation__menuToggle label {
+  color: #afaeae;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  display: block;
+}
+
+.navigation__menuToggle label:hover {
+  cursor: pointer;
+}
+
+.navigation__menu {
+  position: absolute;
+  width: 300px;
+  margin: -79px 0 0 -50px;
+  padding: 50px;
+  padding-top: 80px;
+  background: #494e5f;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.navigation__menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
 .sidebar {
   background-color: #494e5f;
   max-width: 250px;
@@ -186,6 +308,52 @@ html main {
 
 .code-examples details summary:hover {
   cursor: pointer;
+}
+
+.projects > div {
+  position: relative;
+  max-width: 540px;
+  margin-bottom: 15px;
+}
+
+.projects > div:last-child {
+  margin-bottom: 0;
+}
+
+.projects > div::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  background: #494e5f;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(73, 78, 95, 0.902398)), color-stop(69%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(0deg, rgba(73, 78, 95, 0.902398) 10%, rgba(255, 255, 255, 0) 69%);
+}
+
+.projects__information {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+}
+
+.projects__name {
+  color: #fefefa;
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+
+.projects__description {
+  color: #d8d8d8;
+}
+
+.projects__technologies span {
+  font-size: 0.8rem;
+  color: #fefefe;
+  background-color: #494e5f;
+  padding: 2px 5px;
+  margin-right: 5px;
 }
 
 footer {

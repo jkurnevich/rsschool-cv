@@ -48,6 +48,22 @@
         </section>
       </aside>
       <div class="content-area">
+        <nav class="navigation">
+          <div class="navigation__menuToggle">
+            <label for="check">Navigation</label>
+            <input id="check" type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="navigation__menu">
+              <a href="#"><li>Home</li></a>
+              <a href="#"><li>About</li></a>
+              <a href="#"><li>Info</li></a>
+              <a href="#"><li>Contact</li></a>
+              <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+            </ul>
+          </div>
+        </nav>
         <section class="technikal-skills">
           <h2>Technical Skills</h2>
           <div class="technikal-skills__lists">
@@ -148,7 +164,7 @@ function sliderCards() {
   let viewSlideActive = [];
 
   function displayArrow(btn, index) {
-    if(slider[index].offsetWidth < wrapSlider[index].offsetWidth) {
+    if(slider[index].offsetWidth &lt; wrapSlider[index].offsetWidth) {
       btn.style.display = 'none';
     }
   }
@@ -164,7 +180,7 @@ function sliderCards() {
     }, {passive: true})
     sl.addEventListener('touchend', function (e) {
       deltaX = e.changedTouches[0].clientX - clientX;
-      if (viewSlide < countChildren[index] - viewSlideActive[index] && deltaX < 0) { // Если верно то
+      if (viewSlide &lt; countChildren[index] - viewSlideActive[index] && deltaX &lt; 0) { // Если верно то
         viewSlide++;
       } else if (viewSlide > 0 && deltaX > 0) {
         viewSlide--;
@@ -183,7 +199,7 @@ function sliderCards() {
   btnNext.forEach(function (btn, index) {
     displayArrow(btn, index);
     btn.addEventListener("click", function () {
-      if (viewSlide < countChildren[index] - viewSlideActive[index]) { // Если верно то
+      if (viewSlide &lt; countChildren[index] - viewSlideActive[index]) { // Если верно то
         viewSlide++;
       } else {
         viewSlide = 0;
@@ -251,6 +267,45 @@ function goToTop() {
               </pre>
             </div>
           </details>
+        </section>
+        <section class="projects">
+          <h2>Projects</h2>
+          <div>
+            <a href="https://cybersports.online/" target="_blank">
+              <img src="assets/images/projects/e-sport.png" alt="cybersports.online">
+              <div class="projects__information">
+                <p class="projects__name">cybersports.online</p>
+                <div class="projects__description">eSports portal with information about tournaments, bookmakers and games</div>
+                <div class="projects__technologies">
+                  <span>HTML</span><span>SCSS</span><span>JS</span><span>PHP</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="https://betraja.in/" target="_blank">
+              <img src="assets/images/projects/betraja.png" alt="betraja.in">
+              <div class="projects__information">
+                <p class="projects__name">betraja.in</p>
+                <div class="projects__description">online encyclopaedia on the world of betting in India</div>
+                <div class="projects__technologies">
+                  <span>HTML</span><span>SCSS</span><span>JS</span><span>PHP</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="https://advanta-m.ru/" target="_blank">
+              <img src="assets/images/projects/advanta.png" alt="advanta-m.ru">
+              <div class="projects__information">
+                <p class="projects__name">advanta-m.ru</p>
+                <div class="projects__description">online store selling warehouse and construction equipment</div>
+                <div class="projects__technologies">
+                  <span>HTML</span><span>CSS</span><span>JS</span><span>PHP</span>
+                </div>
+              </div>
+            </a>
+          </div>
         </section>
       </div>
     </main>
