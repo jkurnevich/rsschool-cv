@@ -14,6 +14,12 @@ html {
         background-color: rgb(254, 254, 250);
         display: flex;
     }
+
+    @media (max-width: 768px) {
+        main {
+            flex-direction: column;
+        }
+    }
 }
 
 .global-wrap {
@@ -46,6 +52,14 @@ html {
         margin-top: -10px;
         color: #b5b5b5;
         font-size: 0.9rem;
+    }
+
+    @media (max-width:768px) {
+        width: unset;
+    }
+
+    @media (max-width:600px) {
+        padding: 20px;
     }
 }
 
@@ -152,6 +166,22 @@ html {
             }
         }
     }
+
+    @media (max-width:768px) {
+        position: absolute;
+        top: 50px;
+
+        &__menu {
+            transform: translate(-103%, 0);
+            margin: -79px 0 0 -32px;
+        }
+    }
+
+    @media (max-width:600px) {
+        &__menu {
+            margin: -79px 0 0 -17px;
+        }
+    }
 }
 
 .sidebar {
@@ -174,7 +204,25 @@ html {
         color: #ffe7d4;
         margin-top: 40px;
     }
-  }
+
+    @media (max-width:900px) and (min-width:769px) {
+        padding: 80px 30px;
+        max-width: 220px;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+
+    @media (max-width:768px) {
+        max-width: unset;
+        padding: 80px 50px 30px;
+    }
+
+    @media (max-width:400px) {
+        padding: 80px 30px 30px;
+    }
+}
 
 .candidate {
     border-bottom: 3px solid #ffe7d4;
@@ -234,6 +282,17 @@ html {
                 margin-right: 5px;
                 width: 33px;
                 display: inline-block;
+            }
+        }
+    }
+
+    @media (max-width:400px) {
+        &__lists {
+            flex-direction: column;
+            align-items: center;
+
+            div {
+                width: 60%;
             }
         }
     }
@@ -303,7 +362,7 @@ html {
     & > div {
         position: relative;
         max-width: 540px;
-        margin-bottom: 15px;
+        margin: 0 auto 15px;
 
         &:last-child {
             margin-bottom: 0;
@@ -319,12 +378,19 @@ html {
             background: rgb(73,78,95);
             background: linear-gradient(0deg, rgba(73,78,95,0.9023984593837535) 10%, rgba(255,255,255,0) 69%);
         }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
 
     &__information {
         position: absolute;
         bottom: 0;
         padding: 20px;
+        left: 0;
+        right: 0;
     }
 
     &__name {
@@ -344,6 +410,22 @@ html {
             background-color: #494e5f;
             padding: 2px 5px;
             margin-right: 5px;
+        }
+    }
+
+    @media (max-width:550px) {
+        &__description {
+            display: none;
+        }
+    }
+
+    @media (max-width:350px) {
+        &__technologies {
+            display: none;
+        }
+
+        &__name {
+            margin-bottom: 0;
         }
     }
 }
@@ -374,5 +456,9 @@ html {
         img {
             min-width: 100px;
         }
+    }
+
+    @media (max-width:600px) {
+        padding: 5px 15px;
     }
 }

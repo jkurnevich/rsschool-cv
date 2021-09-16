@@ -18,6 +18,15 @@ html main {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  html main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .global-wrap {
   max-width: 1000px;
   -webkit-box-shadow: 0 2px 8px rgba(14, 19, 24, 0.07);
@@ -50,6 +59,18 @@ html main {
   margin-top: -10px;
   color: #b5b5b5;
   font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .content-area {
+    width: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  .content-area {
+    padding: 20px;
+  }
 }
 
 .navigation__menuToggle {
@@ -172,6 +193,24 @@ html main {
   color: tomato;
 }
 
+@media (max-width: 768px) {
+  .navigation {
+    position: absolute;
+    top: 50px;
+  }
+  .navigation__menu {
+    -webkit-transform: translate(-103%, 0);
+            transform: translate(-103%, 0);
+    margin: -79px 0 0 -32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navigation__menu {
+    margin: -79px 0 0 -17px;
+  }
+}
+
 .sidebar {
   background-color: #494e5f;
   max-width: 250px;
@@ -192,6 +231,29 @@ html main {
 .sidebar h4 {
   color: #ffe7d4;
   margin-top: 40px;
+}
+
+@media (max-width: 900px) and (min-width: 769px) {
+  .sidebar {
+    padding: 80px 30px;
+    max-width: 220px;
+  }
+  .sidebar h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    max-width: unset;
+    padding: 80px 50px 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    padding: 80px 30px 30px;
+  }
 }
 
 .candidate {
@@ -255,6 +317,21 @@ html main {
   display: inline-block;
 }
 
+@media (max-width: 400px) {
+  .technikal-skills__lists {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .technikal-skills__lists div {
+    width: 60%;
+  }
+}
+
 .contact-information ul {
   padding: 0;
 }
@@ -312,7 +389,7 @@ html main {
 .projects > div {
   position: relative;
   max-width: 540px;
-  margin-bottom: 15px;
+  margin: 0 auto 15px;
 }
 
 .projects > div:last-child {
@@ -331,10 +408,17 @@ html main {
   background: linear-gradient(0deg, rgba(73, 78, 95, 0.902398) 10%, rgba(255, 255, 255, 0) 69%);
 }
 
+.projects > div img {
+  max-width: 100%;
+  height: auto;
+}
+
 .projects__information {
   position: absolute;
   bottom: 0;
   padding: 20px;
+  left: 0;
+  right: 0;
 }
 
 .projects__name {
@@ -353,6 +437,21 @@ html main {
   background-color: #494e5f;
   padding: 2px 5px;
   margin-right: 5px;
+}
+
+@media (max-width: 550px) {
+  .projects__description {
+    display: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .projects__technologies {
+    display: none;
+  }
+  .projects__name {
+    margin-bottom: 0;
+  }
 }
 
 footer {
@@ -390,5 +489,11 @@ footer .git-link a {
 
 footer .school-link img {
   min-width: 100px;
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 5px 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
